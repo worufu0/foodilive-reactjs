@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './components/header';
-import Home from './pages/home';
-import Menu from './pages/menu';
-import Contact from './pages/contact';
+import Header from './components/Header';
+import Home from './pages/Home';
+import Dish from './pages/Dish';
+import Contact from './pages/Contact';
 
 function App() {
     return (
@@ -13,9 +13,11 @@ function App() {
                 <Route exact path="/">
                     <Home />
                 </Route>
+
                 <Route path="/thuc-don">
-                    <Menu />
+                    <Dish />
                 </Route>
+
                 <Route path="/lien-he">
                     <Contact />
                 </Route>

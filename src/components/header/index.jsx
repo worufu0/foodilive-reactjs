@@ -1,51 +1,42 @@
 import React from 'react';
-import './style.scss';
 import PropTypes from 'prop-types';
-import { AiOutlineBell, AiOutlineUser } from 'react-icons/ai';
+import './Header.scss';
 import { NavLink } from 'react-router-dom';
+import { HiOutlineBell, HiOutlineUser } from 'react-icons/hi';
 
 Header.propTypes = {};
 
 function Header(props) {
     return (
         <div className="header">
-            <div className="header_logo">
-                <NavLink exact to="/" className="link">
+            <div className="header-left">
+                <NavLink exact to="/" className="header-left-logo">
                     foodilive
                 </NavLink>
             </div>
 
-            <div className="header_nav">
-                <NavLink
-                    exact
-                    to="/"
-                    activeClassName="active"
-                    className="nav-item"
-                >
-                    Trang chủ
-                </NavLink>
-                <NavLink
-                    to="/thuc-don"
-                    activeClassName="active"
-                    className="nav-item"
-                >
-                    Thực đơn
-                </NavLink>
-                <NavLink
-                    to="/lien-he"
-                    activeClassName="active"
-                    className="nav-item"
-                >
-                    Liên hệ
-                </NavLink>
+            <div className="header-center">
+                <div className="header-center-nav">
+                    <NavLink exact to="/" className="header-center-nav__item">
+                        Trang chủ
+                    </NavLink>
+
+                    <NavLink to="/thuc-don" className="header-center-nav__item">
+                        Thực đơn
+                    </NavLink>
+
+                    <NavLink to="/lien-he" className="header-center-nav__item">
+                        Liên hệ
+                    </NavLink>
+                </div>
             </div>
 
-            <div className="header_buttons">
-                <div className="button">
-                    <AiOutlineBell />
+            <div className="header-right">
+                <div className="header-right__btn">
+                    <HiOutlineBell />
                 </div>
-                <div className="button">
-                    <AiOutlineUser />
+                <div className="header-right__btn">
+                    <HiOutlineUser />
                 </div>
             </div>
         </div>

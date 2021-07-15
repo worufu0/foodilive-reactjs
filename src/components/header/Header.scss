@@ -1,0 +1,72 @@
+@import '../../scss//mixin.scss';
+
+$textColor: #b9bdc5;
+$hoverColor: #292a42;
+
+.header {
+    @include flex(row, space-between, center);
+
+    position: fixed;
+    top: 1.5vw;
+    left: 1.5vw;
+    right: 1.5vw;
+
+    z-index: 1000;
+
+    &-left {
+        &-logo {
+            font-family: 'Merienda', cursive;
+            font-weight: bold;
+            font-size: 1.75vw;
+            text-decoration: none;
+
+            color: #1d1d32;
+        }
+    }
+
+    &-center {
+        @include flex(row, space-between, center);
+
+        &-nav {
+            &__item {
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-weight: bold;
+                font-size: 1.25vw;
+                text-decoration: none;
+
+                color: $textColor;
+
+                padding: 3vw;
+
+                transition: 0.3s color ease-in-out;
+            }
+
+            &__item.active,
+            &__item:hover {
+                color: $hoverColor;
+            }
+        }
+    }
+
+    &-right {
+        display: flex;
+
+        &__btn {
+            font-size: 1.75vw;
+
+            cursor: pointer;
+
+            color: $textColor;
+
+            transition: 0.3s color ease-in-out;
+        }
+
+        &__btn:not(:last-child) {
+            padding-right: 3vw;
+        }
+
+        &__btn:hover {
+            color: $hoverColor;
+        }
+    }
+}

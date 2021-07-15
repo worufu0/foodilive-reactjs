@@ -1,0 +1,144 @@
+@import '../../scss/animation.scss';
+@import '../../scss/mixin.scss';
+
+.dish-img {
+    @include absolute(120%, 50%);
+
+    border-radius: 100%;
+    border: 0.1vw solid #e6e6e6;
+
+    width: 48vw;
+    height: 48vw;
+
+    margin: 1vw;
+
+    &::before {
+        @include absolute(0%, 50%);
+
+        content: '';
+
+        border-radius: 100%;
+
+        width: 110%;
+        height: 110%;
+
+        background-image: linear-gradient(90deg, transparent 0%, #f6f6f6 40%);
+    }
+
+    &-ingred {
+        @include flex(row, flex-end, center);
+
+        width: 14vw;
+        height: 4vw;
+
+        &__text {
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 1vw;
+            font-weight: bold;
+            word-wrap: break-word;
+
+            color: #7c7c83;
+            opacity: 0.5;
+
+            margin: 0 2vw;
+
+            transition: 0.3s opacity ease-in-out;
+        }
+
+        &__img {
+            width: 4vw;
+
+            filter: drop-shadow(-0.5vw 1vw 1vw #c9c9c9);
+
+            transition: 0.3s transform ease-in-out;
+        }
+
+        &__dot {
+            position: relative;
+
+            width: 0.3vw;
+            height: 0.3vw;
+
+            border-radius: 100%;
+
+            background-color: #7c7c83;
+            opacity: 0.5;
+        }
+
+        &__dot::after {
+            @include absolute(50%, 50%);
+
+            content: '';
+
+            width: 1vw;
+            height: 1vw;
+
+            border-radius: 100%;
+
+            background-color: #7c7c83;
+            opacity: 0.2;
+        }
+
+        &__dot,
+        &__dot::after {
+            transition: 0.3s opacity ease-in-out;
+        }
+
+        &:hover &__dot,
+        &:hover &__text {
+            opacity: 1;
+        }
+
+        &:hover &__dot::after {
+            opacity: 0.3;
+            animation: 0.5s linear 0s infinite alternate DotHover;
+        }
+
+        &:hover &__img {
+            transform: scale(1.25);
+        }
+    }
+
+    &-ingred--one {
+        @include absolute(-33.25%, 25%);
+    }
+
+    &-ingred--two {
+        @include absolute(-41.25%, 50%);
+    }
+
+    &-ingred--three {
+        @include absolute(-33.25%, 75%);
+    }
+
+    &__plate--large {
+        @include absolute(50%, 50%);
+
+        width: 40vw;
+        height: 40vw;
+
+        border-radius: 100%;
+        box-shadow: 0 0 2vw 0.1vw #c9c9c9;
+
+        background-color: #fdfdfd;
+    }
+
+    &__plate--medium {
+        @include absolute(50%, 50%);
+
+        width: 32vw;
+        height: 32vw;
+
+        border-radius: 100%;
+        box-shadow: 0 0 1vw 0.1vw #e0e0e0;
+
+        background: radial-gradient(circle, #a2a2a2 0%, #f6f6f6 67.5%);
+    }
+
+    &__plate--small {
+        @include absolute(50%, 50%);
+
+        width: 28vw;
+        height: 28vw;
+    }
+}
