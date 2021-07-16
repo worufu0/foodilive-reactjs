@@ -1,0 +1,24 @@
+@import '../../scss/mixin.scss';
+
+.dish-list {
+    @include absolute(15%, 115%);
+
+    & > *:not(:last-child) {
+        margin-right: 4vw;
+    }
+
+    &__thumbnail {
+        width: 12vw;
+        height: 12vw;
+
+        filter: drop-shadow(0vw 2vw 2vw #c9c9c9);
+
+        transition: 0.3s transform ease-in-out;
+
+        cursor: pointer;
+    }
+
+    &__thumbnail:hover {
+        transform: translateY(-40%);
+    }
+}

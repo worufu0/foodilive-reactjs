@@ -7,9 +7,14 @@ DishText.propTypes = {};
 function DishText(props) {
     return (
         <div className="dish-text">
-            <div className="dish-text__name"></div>
-            <div className="dish-text__title"></div>
-            <div className="dish-text__intro"></div>
+            <div className="dish-text__name">Bít tết bò</div>
+            <div className="dish-text__title">Thịt bò, rau cải và trứng</div>
+            <div className="dish-text__intro">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Luctus venenatis lectus magna fringilla urna. Quis vel eros
+                donec ac odio.
+            </div>
         </div>
     );
 }

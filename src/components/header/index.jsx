@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Header.scss';
 import { NavLink } from 'react-router-dom';
-import { HiOutlineBell, HiOutlineUser } from 'react-icons/hi';
+import {
+    HiOutlineBell,
+    HiOutlineShoppingBag,
+    HiOutlineUser,
+} from 'react-icons/hi';
 
 Header.propTypes = {};
 
@@ -35,6 +39,11 @@ function Header(props) {
                 <div className="header-right__btn">
                     <HiOutlineBell />
                 </div>
+
+                <div className="header-right__btn">
+                    <HiOutlineShoppingBag />
+                </div>
+
                 <div className="header-right__btn">
                     <HiOutlineUser />
                 </div>

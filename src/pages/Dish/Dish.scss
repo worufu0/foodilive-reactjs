@@ -1,0 +1,9 @@
+@import '../../scss/mixin.scss';
+
+.dish {
+    &-left-col {
+        @include absolute(12.5%, 40%);
+
+        width: 30vw;
+    }
+}

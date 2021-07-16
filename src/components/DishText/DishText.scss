@@ -1,0 +1,48 @@
+$boldColor: #35354c;
+
+.dish-text {
+    height: 100%;
+
+    &__name,
+    &__title,
+    &__intro {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    &__name {
+        font-size: 3.25vw;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1vw;
+
+        max-height: 7.8vw;
+
+        color: $boldColor;
+
+        margin-bottom: 2.25vw;
+    }
+
+    &__title {
+        font-size: 1.75vw;
+        font-weight: 500;
+        letter-spacing: -0.05vw;
+        line-height: 1.2;
+
+        max-height: 2.1vw;
+
+        color: $boldColor;
+
+        margin: 1.5vw 0;
+    }
+
+    &__intro {
+        font-size: 1.25vw;
+        letter-spacing: -0.05vw;
+        line-height: 1.6;
+
+        max-height: 8vw;
+
+        color: #9796a4;
+    }
+}

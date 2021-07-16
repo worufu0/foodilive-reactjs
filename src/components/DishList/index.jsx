@@ -7,9 +7,9 @@ DishList.propTypes = {};
 function DishList(props) {
     return (
         <div className="dish-list">
-            <div className="dish-list__thumbnail"></div>
-            <div className="dish-list__thumbnail"></div>
-            <div className="dish-list__thumbnail"></div>
+            <img src="images/dish1.png" className="dish-list__thumbnail" />
+            <img src="images/dish2.png" className="dish-list__thumbnail" />
+            <img src="images/dish3.png" className="dish-list__thumbnail" />
         </div>
     );
 }
